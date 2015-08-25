@@ -31,6 +31,13 @@ int main(int argc, char *argv[])
 
 size_t input_size(const char *f_name)
 {
+    /**
+     * Detectin size of input file
+     *
+     * @f_name const char name of input file
+     *
+     * @return count size_t Number of letters in input file
+     */
     size_t count = 0;
     char S;
 
@@ -47,6 +54,16 @@ size_t input_size(const char *f_name)
 
 void read_set(const char *f_name, char* set)
 {
+    /**
+     * Reading set of letters
+     *
+     * Filling up 'set' with the letters from input file
+     *
+     * @f_name  const char*  Name of input file
+     * @set     char*        Initialised array of corresponding type
+     *
+     * @return void
+     */
     char S;
     ifstream f(f_name);
     int i = 0;
@@ -64,6 +81,16 @@ void read_set(const char *f_name, char* set)
 
 void selection_sort(char* set, size_t set_size)
 {
+    /**
+     * Selection sort
+     *
+     * Implemets backward selection sort algorithm on set of letters
+     *
+     * @set       char*   Filled set of letters from input file
+     * @set_size  size_t  Length of 'set' array
+     *
+     * @return void
+     */
     char temp;
 
     for (unsigned int i = 0; i<set_size; i++)
@@ -82,6 +109,15 @@ void selection_sort(char* set, size_t set_size)
 
 void write_set(const char *f_name, char* set, size_t set_size)
 {
+    /**
+     * Writing array to file
+     *
+     * @f_name      const char* Name of output file
+     * @set         char*       Array of sorted letters
+     * @set_size    size_t      Length of array of letters
+     *
+     * @return void
+     */
     ofstream f(f_name);
     for (unsigned int i = 0; i<set_size; i++)
     {
