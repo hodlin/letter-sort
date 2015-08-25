@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//change next pathes to correspondet on your machine
+
 const char in_f_name[] = "/home/dmytro/QtProjects/letter_sort/input.txt";
 const char out_f_name[] = "/home/dmytro/QtProjects/letter_sort/output.txt";
 
